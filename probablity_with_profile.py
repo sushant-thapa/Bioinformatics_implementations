@@ -21,17 +21,18 @@ def calculate_probablity_of_kmer(kmer,profile):
     if(len(kmer)!=len(profile['A']) or len(kmer)!=len(profile['C']) or len(kmer)!=len(profile['G']) or len(kmer)!=len(profile['T'])):
         raise Exception('the profile length and kmer length do not match')
     output_string =''
-    output_value =1
+    output_value = 1
     for i,nucleotide in enumerate(kmer):
         output_string += str(profile[nucleotide][i])+"*"
         output_value = output_value*profile[nucleotide][i]
     output_string = output_string[:-1] #this eliminates the last character *
-    print(kmer,end='\t')
-    print(output_string,end='\t')
-    print(round(output_value,5))
+    # print(kmer,end='\t')
+    # print(output_string,end='\t')
+    # print(round(output_value,5))
     return round(output_value,5)
         
-
+"""
+The following shows how the function above could be used.
 seq = ['ACGTAACACCGT','TGGTACGTCCCA','CGTCGCTCGTGA','CCGAAGGGTACG','CGAACGTATACG']
 for seq in seq:
     L = len(seq)
@@ -47,6 +48,8 @@ for seq in seq:
             kmer_max = i_kmer
             prob_value_max = i_prob
     print(kmer_max,"has the maximum probablity of ",prob_value_max)
+
+"""
 
 
 
