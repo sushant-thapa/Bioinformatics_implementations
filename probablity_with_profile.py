@@ -1,8 +1,4 @@
-"""
-The following function calculates the probablity of a kmer, given a profile.
-it calculates P(kmer|profile)
 
-"""
 profile = {
 'A':[0.11,1.00,0.56,0.22],
 'C':[0.11,0.11,0.22,0.33],
@@ -16,7 +12,8 @@ profile = {
 
 def calculate_probablity_of_kmer(kmer,profile):
     """
-    checking whether the profile length and the kmer length match or not
+        The following function calculates the probablity of a kmer, given a profile.
+        it calculates P(kmer|profile)
     """
     if(len(kmer)!=len(profile['A']) or len(kmer)!=len(profile['C']) or len(kmer)!=len(profile['G']) or len(kmer)!=len(profile['T'])):
         raise Exception('the profile length and kmer length do not match')
