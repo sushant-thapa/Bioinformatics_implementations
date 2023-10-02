@@ -12,7 +12,7 @@ profile = {
 
 def calculate_probablity_of_kmer(kmer,profile):
     """
-        The following function calculates the probablity of a kmer, given a profile.
+         The following function calculates the probablity of a kmer, given a profile.
         it calculates P(kmer|profile)
     """
     if(len(kmer)!=len(profile['A']) or len(kmer)!=len(profile['C']) or len(kmer)!=len(profile['G']) or len(kmer)!=len(profile['T'])):
