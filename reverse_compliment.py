@@ -21,7 +21,7 @@ def single_base_compliment(base):
     elif base =="C":
         return "G"
     else:
-        raise Exception("The base you gave is ", base, "This base not recognized. base should be A, C, G, or T")
+        raise Exception("The base you gave is ```", base, "```This base not recognized. base should be A, C, G, or T")
 
 def reverse_string(sequence):
     return sequence[-1::-1] # here we follow the syntax of "start:stop:step". Thus we are starting at the last element.
